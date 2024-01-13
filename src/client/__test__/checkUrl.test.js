@@ -6,7 +6,7 @@ describe('urlValidity', ()=> {
     })
     
     test('emails are not considered valid urls', () => {
-        expect(isValidUrl("mailto:ahmed@gmail.com")).toBeFalsy();
+        expect(isValidUrl("mailto:parminderkaur723@gmail.com")).toBeFalsy();
     })
     
     test('expect urls to be true', () => {

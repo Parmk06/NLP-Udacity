@@ -32,11 +32,11 @@ const handleError = (code, msg) => {
 const successResponse = (data, code) =>{
     const { score_tag, agreement, subjectivity, confidence, irony } = data
             let sample = {
-                score_tag: score_tag,
-                agreement: agreement,
-                subjectivity: subjectivity,
-                confidence: confidence,
-                irony: irony
+                score_tag: `Score Tag: ${score_tag}`,
+                agreement: `Agreement: ${agreement}`,
+                subjectivity: `Subjectivity: ${subjectivity}`,
+                confidence: `Confidence: ${confidence}`,
+                irony: `Irony: ${irony}`
             }
             result = { sample, status: code }
             return result
