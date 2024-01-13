@@ -1,0 +1,49 @@
+# Evaluate News NLP - Udacity Project
+
+##Starter code is provided by the Udacity
+
+## Project Overview
+
+The **evaluate-news-nlp-udacity** project is a part of the Udacity Front-End Developer nanodegree. It incorporates various web development tools like Webpack, SCSS, Jest, and NodeJS. The primary goal is to create a web application that integrates with a Natural Language Processing (NLP) API, specifically utilizing MeaningCloud. The application is designed to evaluate news articles based on user-provided URLs.
+
+## Prerequisites
+
+Before using this project, obtain an API_KEY from MeaningCloud. If you don't have one, create an account and generate an API key [here](https://www.meaningcloud.com/developer/create-account).
+
+## Installation
+
+To install the project, run:
+
+npm install
+
+## Usage
+
+To use the project, start the server.js with:
+
+npm start
+
+
+
+After starting the server, launch the client with:
+
+npm run build-dev
+
+
+## Build
+
+To create a production-ready build, execute:
+
+npm run build-prod
+
+
+## Contributing
+
+This project is not open to contributions.
+
+## Observations
+
+- Obtain an API_KEY from MeaningCloud before using the project.
+- Follow the installation instructions to set up the project.
+- Use the provided commands for starting the server, building the application.
+
+Feel free to explore and enhance your understanding of web development and N
