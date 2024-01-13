@@ -6,7 +6,7 @@ The **evaluate-news-nlp-udacity** project, part of the Udacity Front-End Develop
 
 ## Prerequisites
 
-Before using this project, obtain an API_KEY from MeaningCloud. If you don't have one, create an account and generate an API key [here](https://www.meaningcloud.com/developer/create-account).
+Before using this project, obtain an API_KEY from MeaningCloud. If you don't have one, create an account and generate an API key [API_KEY= ********************](https://www.meaningcloud.com/developer/create-account).
 
 ## Installation
 
@@ -30,6 +30,18 @@ Before using this project, obtain an API_KEY from MeaningCloud. If you don't hav
 
    npm run build-prod
 
+
+##Testing
+- To run tests, execute:
+
+   npm run test
+- The test results should look like:
+
+   Test Suites: 2 passed, 2 total
+   Tests:       6 passed, 6 total
+   Snapshots:   0 total
+   Time:        1.818 s, estimated 2 s
+   Ran all test suites.
 ## Contributing
 
 This project is not open to contributions.
