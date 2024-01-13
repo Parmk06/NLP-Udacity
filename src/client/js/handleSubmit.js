@@ -1,5 +1,5 @@
 import axios from "axios";
-import { isValidUrl } from "checkURL"; 
+import { isValidUrl } from "./checkURL"; 
 
 /**
  * Validates the user input before making the API call.
