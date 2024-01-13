@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP- Udacity Project</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <p>Enter a URL of an article to discover its sentiments.</p>
+            <section>
+                <form id = "form" onsubmit="Client.handleSubmit(event)">
+                    <label form="article-url">URL</label>
+                    <input id ="article-url" type="text" name="input" value="" placeholder="Write article's url here!">
+                    <button type="submit"class="btn-submit">Submit</button>
+                </form>
+            </section>
+            <section>
+                <strong>Form Results:</strong>
+                <div id="text"></div>
+                <div id="agreement"></div>
+                <div id="subjectivity"></div>
+                <div id="confidence"></div>
+                <div id="irony"></div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Aylien Natural Language Processing</p>
+        </footer>
+    </main>
+    <script>
+        // if ('serviceWorker' in navigator) {
+        //     window.addEventListener('load', ()=>{
+        //         navigator.serviceWorker.register('/service-worker.js')
+        //     });
+        // }
+    </script>
+</body>
+</html>
