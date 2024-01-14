@@ -1,7 +1,8 @@
 const webpack = require("webpack"),
     path = require("path"),
     HtmlWebpackPlugin = require("html-webpack-plugin"),
-    {CleanWebpackPlugin} = require("clean-webpack-plugin");
+    { CleanWebpackPlugin } = require("clean-webpack-plugin"),
+    WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
     mode: 'development',
@@ -17,31 +18,30 @@ module.exports = {
     module: {
         rules: [
             {
-              test: /\.js$/,
-              exclude: /node_modules/,
-              loader: "babel-loader"
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader"
             },
             {
                 test: /\.s[ac]ss$/i,
-                use:["style-loader", "css-loader", "sass-loader"]
+                use: ["style-loader", "css-loader", "sass-loader"]
             }
         ],
     },
-
-    plugins: [new HtmlWebpackPlugin({
-        template: "./src/client/views/index.html",
-        filename: "./index.html"
-    }
-    ),
-    new CleanWebpackPlugin({
-        dry: true,
-        verbose: false,
-        cleanStaleWebpackAssets: true,
-        protectWebpackAssets: false,
-    }),
-],
-
-}
-
-
-
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/client/views/index.html",
+            filename: "./index.html"
+        }),
+        new WorkboxPlugin.GenerateSW({
+            clientsClaim: true,
+            skipWaiting: true,
+        }),
+        new CleanWebpackPlugin({
+            dry: true,
+            verbose: false,
+            cleanStaleWebpackAssets: true,
+            protectWebpackAssets: false,
+        }),
+    ],
+};
