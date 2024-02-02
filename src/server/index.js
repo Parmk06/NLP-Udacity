@@ -11,6 +11,7 @@ app.use(cors(
         optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
       }
 ))
+
 //configure my env files
 dotenv.config()
 
@@ -18,9 +19,10 @@ port = 8080
 const key = process.env.API_KEY;
 //read the json files coming to you
 app.use(express.json())
+app.use(express.static('dist'))
 
 app.get("/", async (req, res) => {
-   res.send("server page")
+   res.send("dist/index.html")
 })
 
 app.post("/",  async (req, res) => {
